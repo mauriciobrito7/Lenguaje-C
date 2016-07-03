@@ -1,4 +1,4 @@
-# Aprender LenguajeC Learning Lenguage C
+# Aprender LenguajeC-Learning Lenguage C
 Repositorio dedicado a códigos de practica para aprender Lenguaje C.
 
 1. Estructura básica de un programa en lenguaje C
