@@ -8,16 +8,16 @@ typedef struct Node
 }Node;
 
 /*
-    Funciones de la lista-Functions list:
-    Node *createList(Node *p);
-    Node * crcreateNodent dato);
-    Node *insertIntoListAtTheEnd(int dato, Node *p);
-    Node* insertIntoTheStartList(int dato, Node *p);
-    void printList(Node * p);
-    void destroyNode(Node * Node);
-    Node * deleteTheBeginnning(Node *p); 
-    Node * deleteSpecificNode(int dato, Node *p);
-    Node * deleteList(Node *p);
+	Funciones de la lista-Functions list:
+	Node *createList(Node *p);
+	Node * crcreateNodent dato);
+	Node *insertIntoListAtTheEnd(int dato, Node *p);
+	Node* insertIntoTheStartList(int dato, Node *p);
+	void printList(Node * p);
+	void destroyNode(Node * Node);
+	Node * deleteTheBeginnning(Node *p); 
+	Node * deleteSpecificNode(int dato, Node *p);
+	Node * deleteList(Node *p);
 
  */
 
@@ -36,7 +36,7 @@ Node * createNode(int dato)
     //If you not have been able to allocate memory
     if(!newNode)
     {
-       printf("Could not create memory for the node\n");            
+       printf("Could not create memory for the node\n");			
        printf("No se pudo create memoria para el nodo\n");
        return NULL;
     }
@@ -77,18 +77,18 @@ Node *insertIntoListAtTheEnd(int dato, Node *p)
 
 Node* insertIntoTheStartList(int dato, Node *p)
 {
-    Node *newNode;
-    newNode=createNode(dato);
-     if(newNode){
-        if(!p)
-            p=newNode;
-        else{
-            newNode->sig=p;
-            p=newNode;
-            return p;
-        }
-     }
-    return p;
+	Node *newNode;
+	newNode=createNode(dato);
+	 if(newNode){
+	 	if(!p)
+	 		p=newNode;
+	 	else{
+	 		newNode->sig=p;
+	 		p=newNode;
+	 		return p;
+	 	}
+	 }
+	return p;
 }
 
 void printList(Node * p)
@@ -106,42 +106,42 @@ void printList(Node * p)
 
 void destroyNode(Node * Node)
 {
-    free(Node);
+	free(Node);
 }
 
 Node * deleteTheBeginnning(Node *p)
 {
-    if(p){
-        Node* eliminado;
-        eliminado=p;
-        p=p->sig;
-        destroyNode(eliminado);
-    }
+	if(p){
+		Node* eliminado;
+		eliminado=p;
+		p=p->sig;
+		destroyNode(eliminado);
+	}
 
-    return p;
+	return p;
 }
 
 Node * deleteTheEnd(Node *p)
 {
-    
-    if(p){
-        Node *pAuxilary, *NodeAnterior;
-        pAuxilary=p;
-        while(pAuxilary->sig){
-            NodeAnterior=pAuxilary;
-            pAuxilary=pAuxilary->sig;
+	
+	if(p){
+		Node *pAuxilary, *NodeAnterior;
+		pAuxilary=p;
+		while(pAuxilary->sig){
+			NodeAnterior=pAuxilary;
+			pAuxilary=pAuxilary->sig;
      }       
-        NodeAnterior->sig=NULL;
+		NodeAnterior->sig=NULL;
      destroyNode(pAuxilary);
      
-    }   
-    
-    return p;
+	}	
+	
+	return p;
 
 }
 
 Node * deleteSpecificNode(int dato, Node *p)
-{   
+{	
     Node *pAuxilary, *NodeAnterior;
   
     pAuxilary=p;
@@ -163,7 +163,7 @@ Node * deleteSpecificNode(int dato, Node *p)
         printf("Nodo destruido\n");
     }
     else{
-        printf("Sorry it has not found a Node with that data\n");
+    	printf("Sorry it has not found a Node with that data\n");
         printf("Lo siento no se ha encontrado un Node con ese dato\n");
     }
     return p;
@@ -171,30 +171,30 @@ Node * deleteSpecificNode(int dato, Node *p)
 
 Node * deleteList(Node *p)
 {
-    Node *pAuxilary;
-    
-    while(pAuxilary){
-        pAuxilary=p;
-        p=p->sig;
-        destroyNode(pAuxilary); 
-    }
+	Node *pAuxilary;
+	
+	while(pAuxilary){
+		pAuxilary=p;
+		p=p->sig;
+		destroyNode(pAuxilary);	
+	}
 }
 
 int main ()
 {
      Node *p;
-     p = createList(p); 
-     p = insertIntoListAtTheEnd(9, p);
-     p = insertIntoListAtTheEnd(10, p);
-     p = insertIntoListAtTheEnd(11, p);
-     p=insertIntoTheStartList(1,p);
-     p=insertIntoTheStartList(0,p);
-     printList(p);
-     p=deleteTheBeginnning(p);
-     p=deleteTheEnd(p);
-     p=deleteSpecificNode(9,p);
-     printList(p);
-     p=deleteList(p);
-     free(p);
+	 p = createList(p); 
+	 p = insertIntoListAtTheEnd(9, p);
+	 p = insertIntoListAtTheEnd(10, p);
+	 p = insertIntoListAtTheEnd(11, p);
+	 p=insertIntoTheStartList(1,p);
+	 p=insertIntoTheStartList(0,p);
+	 printList(p);
+	 p=deleteTheBeginnning(p);
+	 p=deleteTheEnd(p);
+	 p=deleteSpecificNode(9,p);
+	 printList(p);
+	 p=deleteList(p);
+	 free(p);
      return 0;
 }
