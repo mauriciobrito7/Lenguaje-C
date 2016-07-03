@@ -1,7 +1,7 @@
 # Aprender LenguajeC Learning Lenguage C
 Repositorio dedicado a códigos de practica para aprender Lenguaje C.
 
-1.Estructura básica de un programa en lenguaje C
+1. Estructura básica de un programa en lenguaje C
 2. Estructuras de control (Condicionales, Ciclos, Rupturas)
 3. Funciones
 4. Punteros
@@ -10,8 +10,8 @@ Repositorio dedicado a códigos de practica para aprender Lenguaje C.
 7. Estructuras
 8. Memoria Dinamica
 9. Archivos
-10.Recursividad
-11.Estructura de datos: Listas
+10. Recursividad
+11. Estructura de datos: Listas
 12. Estructuras de datos :Colas
 13. Estructuras de datos :Pilas
 14. Estructuras de datos: Árboles
