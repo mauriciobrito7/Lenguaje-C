@@ -29,6 +29,6 @@ Repo dedicated to codes of practice to learn language C.
 9. files
 10. Recursion
 11.Estructura data: Lists
-12. Data Structures: Colas
-13. Data structures: stacks
+12. Data Structures: Queues
+13. Data structures: Stacks
 14. Data Structures: Trees
