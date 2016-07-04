@@ -21,7 +21,7 @@ typedef struct Node
 
  */
 
-//Initialize list
+//Initialize list-Inicializando la lista en NULL
 Node *createList(Node *p)
 {
     return p=NULL;
@@ -29,11 +29,11 @@ Node *createList(Node *p)
 
 Node * createNode(int dato)
 {
-    //Creating the node
+    //Creating the node- Creando el Nodo, reservamos memoria
     Node *newNode;
     newNode=(Node*)malloc(sizeof(Node));
 
-    //If you not have been able to allocate memory
+    //If you not have been able to allocate memory-Si no se pudo reservar memoria que muestre el siguiente mensaje
     if(!newNode)
     {
        printf("Could not create memory for the node\n");            
@@ -42,28 +42,33 @@ Node * createNode(int dato)
     }
     else
     {
-    //If you  have been able to allocate memory
+    //If you  have been able to allocate memory- Si se pudo reservar memoria entonces que registre el dato  y que el siguiente elemento al que
+    //apunte sea NULL
         newNode->dato=dato;
         newNode->sig=NULL;
     }   
     return newNode;
 }
 
-
+//Insertar al final de la lista
 Node *insertIntoListAtTheEnd(int dato, Node *p)
 {
      Node *pAuxilary ,*newNode;
      newNode=createNode(dato);
 
      //If you could create the node is inserted into the list
+     //Si se pudo crear el nodo que haga la inserción
      if(newNode)
      {
           //If the list is empty 
+          //Si la lista esta vacia que la cabeza apunte al nodo recien creado
          if(!p)
                p=newNode;
          else
          {
          //pAuxiliary used to move between nodes
+         //el pAuxiliary lo usamos para movernos entre los nodos de la lista 
+         //hacemos que apunte al primer elemento de la lista y luego lo movemos hasta al final para hacer la inserción
               pAuxilary=p;
               while(pAuxilary->sig)
                 pAuxilary=pAuxilary->sig;
