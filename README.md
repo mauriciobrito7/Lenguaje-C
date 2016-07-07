@@ -26,7 +26,7 @@ Repo dedicated to codes of practice to learn language C.
 6. Strings
 7. Structures
 8. Dynamic Memory
-9. files
+9. Files
 10. Recursion
 11.Estructura data: Lists
 12. Data Structures: Queues
