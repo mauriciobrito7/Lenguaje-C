@@ -19,7 +19,7 @@ Repositorio dedicado a códigos de practica para aprender Lenguaje C.
 Repo dedicated to codes of practice to learn language C.
 
 1. Basic structure of a program in C language
-2. Control structures (conditionals, Cycles, Ruptures)
+2. Control structures (Conditionals, Cycles, Ruptures)
 3. Functions
 4. Pointers
 5. Arrays
