@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <conio.h>
+
 //Estructura que representa a los elementos en la cola
 
 typedef struct Document{
@@ -12,8 +12,7 @@ typedef struct Document{
 Document *first=NULL, *last=NULL;
 
 void pause(){
-    printf("Press any key to continue..\n");
-    getch();
+    system("pause");
 }
 
 Document * createDocument(Document *_document, char *name){
