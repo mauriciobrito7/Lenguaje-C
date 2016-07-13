@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>
 
 typedef struct Element
 {
@@ -72,6 +71,6 @@ int main ()
 	printAndPop();
 	free(_Element);
 	printf("Presione cualquier tecla para terminar...\n");
-	getch();
+	system("pause");
 	return 0;
 }
