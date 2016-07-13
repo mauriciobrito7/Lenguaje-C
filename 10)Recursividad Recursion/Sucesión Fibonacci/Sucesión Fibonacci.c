@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <conio.h>
+#include <stdlib.h>
 int fibonacci (int n){
 	if (n<2)
 		return n;
@@ -20,6 +20,6 @@ int main (){
 		printf("%i ",res);
 	}
 	printf("n");
-	getch();
+	system("pause");
 	return 0;
 }
