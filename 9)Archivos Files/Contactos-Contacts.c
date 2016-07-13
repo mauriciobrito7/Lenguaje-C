@@ -1,7 +1,6 @@
 //Agenda
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>
 #include <string.h>
 #define NAME_ARCHIVE "contacts.bin"
 #define NAME_ARCHIVE_AUX "contacts_aux.bin"
@@ -85,6 +84,7 @@ void saveContact(Contacts contact)
 	if(!file){
 		printf("Error\n");
 		stop();
+		exit(1);
 	}
 	else{
 		//Recibe 4 parametros:
@@ -131,9 +131,7 @@ void deleteContact()
 
             fwrite(&contact, sizeof(Contacts),1, file);
 		}
-
 	}
-
     stop();
 	fclose(file);
 	fclose(fileAux);
@@ -145,7 +143,6 @@ void showContacts()
 	file=fopen(NAME_ARCHIVE,"rb");
 	if(!file){
 		printf("Empty\n");
-		stop();
 	}
 	else{
 		Contacts contact;
@@ -163,6 +160,5 @@ void showContacts()
 
 void stop()
 {
-	printf("Press any key to continue...\n");
-	getch();
+	system("pause");
 }
