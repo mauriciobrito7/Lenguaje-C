@@ -1,8 +1,6 @@
 //Factorial de un número
-
 #include <stdio.h>
-#include <conio.h>
-
+#include <stdlib.h>
 int factorial(int n){
 	if (n==0)
 		return 1;
@@ -11,11 +9,9 @@ int factorial(int n){
 	}
 }
 
-
 int main (){
 	int n=5;
-
 	printf("The factorial of %i is %i",n, factorial(n));
-	getch();
+	system("pause");
 	return 0;
 }
