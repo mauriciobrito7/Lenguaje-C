@@ -38,6 +38,7 @@ Node * createNode(int dato)
     {
        printf("Could not create memory for the node\n");            
        printf("No se pudo create memoria para el nodo\n");
+       system("pause");
        return NULL;
     }
     else
@@ -170,7 +171,9 @@ Node * deleteSpecificNode(int dato, Node *p)
     else{
         printf("Sorry it has not found a Node with that data\n");
         printf("Lo siento no se ha encontrado un Node con ese dato\n");
+
     }
+    system("pause");
     return p;
 }
 
