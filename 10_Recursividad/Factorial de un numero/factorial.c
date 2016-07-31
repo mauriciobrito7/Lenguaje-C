@@ -1,6 +1,7 @@
 //Factorial de un número de forma recursiva
 #include <stdio.h>
 #include <stdlib.h>
+//Función recursiva
 int factorial(int n){
 	if (n==0)
 		return 1;
