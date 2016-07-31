@@ -1,8 +1,6 @@
 //Realiza un programa en C que lea tres números enteros positivos distintos e imprima el mayor 
 //y el menor valor de los tres. Intente que el programa realice el menor número de comparaciones
 //posibles entre los números.
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
