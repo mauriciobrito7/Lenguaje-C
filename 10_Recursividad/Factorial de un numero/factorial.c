@@ -1,4 +1,4 @@
-//Factorial de un número
+//Factorial de un número de forma recursiva
 #include <stdio.h>
 #include <stdlib.h>
 int factorial(int n){
@@ -11,7 +11,7 @@ int factorial(int n){
 
 int main (){
 	int n=5;
-	printf("The factorial of %i is %i",n, factorial(n));
+	printf("El factorial de %i es %i",n, factorial(n));
 	system("pause");
 	return 0;
 }
